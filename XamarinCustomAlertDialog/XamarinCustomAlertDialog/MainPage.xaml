@@ -1,0 +1,12 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="XamarinCustomAlertDialog.MainPage">
+
+    <StackLayout HorizontalOptions="FillAndExpand" VerticalOptions="Center">
+        <Button x:Name="BtInformation" Text="Alert de información" Clicked="BtInformation_Clicked" />
+        <Button x:Name="BtConfirmation" Text="Alert de confirmación" Clicked="BtConfirmation_Clicked" />
+        <Label x:Name="LbResult" Text="Resultado confirmación:" HorizontalOptions="Center"/>
+    </StackLayout>
+
+</ContentPage>

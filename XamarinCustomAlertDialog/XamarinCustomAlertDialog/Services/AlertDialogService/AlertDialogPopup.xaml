@@ -1,0 +1,64 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<rx:PopupPage xmlns="http://xamarin.com/schemas/2014/forms"
+              xmlns:rx="clr-namespace:Rg.Plugins.Popup.Pages;assembly=Rg.Plugins.Popup"
+                xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+                x:Class="XamarinCustomAlertDialog.Services.AlertDialogService.AlertDialogPopup">
+
+    <Frame x:Name="FrContent" Grid.ColumnSpan="2" Grid.RowSpan="3"
+           BackgroundColor="WhiteSmoke"
+           BorderColor="Black"
+           CornerRadius="10"
+           Margin="20"
+           HorizontalOptions="FillAndExpand" VerticalOptions="Center" 
+           Opacity="0">
+        <Grid x:Name="GrContent" RowDefinitions="50, Auto, 50"
+              ColumnDefinitions="*, *"
+              RowSpacing="10"
+              ColumnSpacing="5"
+              Padding="0"
+              Margin="0"
+              HorizontalOptions="FillAndExpand" VerticalOptions="Center">
+
+
+            <Label x:Name="LbTitle" Grid.ColumnSpan="2"
+                   FontAttributes="Bold"
+                   FontSize="Large"
+                   Margin="0,0,50,0"
+                   MaxLines="1"
+                   LineBreakMode="TailTruncation"
+                   HorizontalTextAlignment="Start" VerticalTextAlignment="Center"
+                   HorizontalOptions="FillAndExpand" VerticalOptions="Center" />
+
+            <Label x:Name="LbMessage" Grid.Row="1" Grid.ColumnSpan="2"
+                   FontSize="Body"
+                   HorizontalOptions="FillAndExpand" VerticalOptions="Start" />
+
+            <ImageButton x:Name="BtClose" Grid.Row="0" Grid.Column="1"
+                         BackgroundColor="Transparent"
+                         Source="close.png"
+                         Aspect="AspectFit"
+                         HeightRequest="48" 
+                         Margin="{OnPlatform Android=0, iOS=-15}"
+                         HorizontalOptions="End" VerticalOptions="Start" 
+                         Clicked="BtClose_Clicked" />
+
+            <Button x:Name="BtCancel" Grid.Row="2" Grid.Column="0"
+                    BackgroundColor="Red"
+                    TextColor="White"
+                    HeightRequest="48" 
+                    CornerRadius="24"
+                    Padding="5"
+                    HorizontalOptions="FillAndExpand" VerticalOptions="End" 
+                    Clicked="BtCancel_Clicked"/>
+
+            <Button x:Name="BtOk" Grid.Row="2" Grid.Column="1"
+                    BackgroundColor="Green"
+                    TextColor="White"
+                    HeightRequest="48" 
+                    CornerRadius="24"
+                    Padding="5"
+                    HorizontalOptions="FillAndExpand" VerticalOptions="End" 
+                    Clicked="BtOk_Clicked"/>
+        </Grid>
+    </Frame>
+</rx:PopupPage>
